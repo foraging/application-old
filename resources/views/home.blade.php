@@ -1,5 +1,9 @@
-@extends('layout.master')
+@extends('layout.standard')
 
 @section('content')
-    Welcome
+    <div class="row">
+        <div class="col">
+            Welcome
+        </div>
+    </div>
 @endsection

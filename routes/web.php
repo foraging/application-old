@@ -13,4 +13,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('', 'HomeController@showHome');
+Route::get('', ['as' => 'home', 'uses' => 'HomeController@showHome']);
