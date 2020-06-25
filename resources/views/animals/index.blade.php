@@ -12,7 +12,7 @@
                     <div class="card animal">
 
                         {{-- Image --}}
-                        <img class="image" alt="Thumbnail for {{ $animal->getName() }}" title="{{ $animal->getName() }}" src="{{ $animal->getImage() }}">
+                        <img class="image" alt="Thumbnail for {{ $animal->name }}" title="{{ $animal->name }}" src="{{ $animal->image }}">
 
                         {{-- Content --}}
                         <div class="content">
@@ -21,10 +21,10 @@
                             <div class="title"><a href="{{ route('animals.read', $animal) }}">{{ $animal->name }}</a></div>
 
                             {{-- Scientific name --}}
-                            <div class="subtitle">{{ $animal->getScientificName() ?? 'Unknown' }}</div>
+                            <div class="subtitle">{{ $animal->scientific ?? 'Unknown' }}</div>
 
                             {{-- Description --}}
-                            <div class="description">{{ Str::limit($animal->getDescription(), 100) }}</div>
+                            <div class="description">{{ Str::limit($animal->description, 100) }}</div>
 
                         </div>
                     </div>

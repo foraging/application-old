@@ -10,10 +10,10 @@
 
                     {{-- Render a card for the park --}}
                     <div class="card park">
-                        <img class="image" alt="Thumbnail for {{ $park->getName() }}" title="{{ $park->getName() }}" src="{{ $park->getImage() }}">
+                        <img class="image" alt="Thumbnail for {{ $park->name }}" title="{{ $park->name }}" src="{{ $park->image }}">
                         <div class="content">
-                            <p class="title"><a href="{{ route('parks.read', $park) }}">{{ $park->getName() }}</a></p>
-                            <p class="description">{{ Str::limit($park->getDescription(), 100) }}</p>
+                            <p class="title"><a href="{{ route('parks.read', $park) }}">{{ $park->name }}</a></p>
+                            <p class="description">{{ Str::limit($park->description, 100) }}</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <small class="text-muted">9 minutes ago</small>
                                 <div class="btn-group">

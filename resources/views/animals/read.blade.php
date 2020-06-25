@@ -1,6 +1,6 @@
 @extends('layout.standard')
 
-@section('title', $animal->getName())
+@section('title', $animal->name)
 
 @section('content')
     <div class="container animals read">
@@ -10,10 +10,10 @@
 
                 {{-- Summary --}}
                 <div class="section animal summary">
-                    <div class="title">{{ $animal->getName() }}</div>
-                    <div class="subtitle">{{ $animal->getScientificName() }}</div>
+                    <div class="title">{{ $animal->name }}</div>
+                    <div class="subtitle">{{ $animal->scientific }}</div>
                     <div class="description">
-                        <p>{{ $animal->getDescription() }}</p>
+                        <p>{{ $animal->description }}</p>
                         <div class="clearfix"></div>
                     </div>
                 </div>
@@ -34,8 +34,8 @@
                     <div class="title">Parks</div>
                     <div class="description">Below is a list of parks that this animal can be found in</div>
                     <ul>
-                        @foreach ($animal->getParks() as $park)
-                            <li><a href="{{ route('parks.read', $park) }}">{{ $park->getName() }}</a></li>
+                        @foreach ($animal->parks as $park)
+                            <li><a href="{{ route('parks.read', $park) }}">{{ $park->name }}</a></li>
                         @endforeach
                     </ul>
                 </div>

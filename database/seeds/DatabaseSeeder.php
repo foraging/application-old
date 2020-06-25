@@ -20,9 +20,12 @@ class DatabaseSeeder extends Seeder
 
         // Link all animals to all parks
         foreach (Park::all() as $park) {
-            $park->setAnimals(Animal::all());
-            $park->setPlants(Plant::all());
-            $park->persist();
+            foreach (Animal::all() as $animal) {
+                $park->animals()->attach($animal->id);
+            }
+            foreach (Plant::all() as $plant) {
+                $park->plants()->attach($plant->id);
+            }
         }
     }
 }

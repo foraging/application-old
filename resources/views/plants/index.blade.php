@@ -12,19 +12,19 @@
                     <div class="card plant">
 
                         {{-- Image --}}
-                        <img class="image" alt="Thumbnail for {{ $plant->getName() }}" title="{{ $plant->getName() }}" src="{{ $plant->getImage() }}">
+                        <img class="image" alt="Thumbnail for {{ $plant->name }}" title="{{ $plant->name }}" src="{{ $plant->image }}">
 
                         {{-- Content --}}
                         <div class="content">
 
                             {{-- Name --}}
-                            <div class="title"><a href="{{ route('plants.read', $plant) }}">{{ $plant->getName() }}</a></div>
+                            <div class="title"><a href="{{ route('plants.read', $plant) }}">{{ $plant->name }}</a></div>
 
                             {{-- Scientific name --}}
-                            <div class="subtitle">{{ $plant->getScientificName() ?? 'Unknown' }}</div>
+                            <div class="subtitle">{{ $plant->scientific ?? 'Unknown' }}</div>
 
                             {{-- Description --}}
-                            <div class="description">{{ Str::limit($plant->getDescription(), 100) }}</div>
+                            <div class="description">{{ Str::limit($plant->description, 100) }}</div>
 
                             {{-- Meta data --}}
                             <div class="meta">
@@ -35,7 +35,7 @@
                                 </div>
 
                                 {{-- Type--}}
-                                <div class="type float-right {{ $plant->getType() }}"><a href="">{{ $plant->getType() }}</a></div>
+                                <div class="type float-right {{ $plant->type }}"><a href="">{{ $plant->type }}</a></div>
 
                                 <div class="clearfix"></div>
                             </div>

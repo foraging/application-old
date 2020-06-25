@@ -1,6 +1,6 @@
 @extends('layout.standard')
 
-@section('title', $park->getName())
+@section('title', $park->name)
 
 @section('content')
     <div class="container parks read">
@@ -10,8 +10,8 @@
 
                 {{-- Summary --}}
                 <div class="section summary">
-                    <div class="title">{{ $park->getName() }}</div>
-                    <div class="description">{{ $park->getDescription() }}</div>
+                    <div class="title">{{ $park->name }}</div>
+                    <div class="description">{{ $park->description }}</div>
                 </div>
 
                 {{-- Locations --}}
@@ -32,8 +32,8 @@
                     <div class="title">Animals</div>
                     <div class="description">Below is a list of animal known to be found in this park</div>
                     <ul>
-                        @foreach ($park->getAnimals() as $animal)
-                            <li><a href="{{ route('animals.read', $animal) }}">{{ $animal->getName() }}</a></li>
+                        @foreach ($park->animals as $animal)
+                            <li><a href="{{ route('animals.read', $animal) }}">{{ $animal->name }}</a></li>
                         @endforeach
                     </ul>
                 </div>
@@ -43,8 +43,8 @@
                     <div class="title">Plants</div>
                     <div class="description">Below is a list of plants known to be found in this park</div>
                     <ul>
-                        @foreach ($park->getPlants() as $plant)
-                            <li><a href="{{ route('plants.read', $plant) }}">{{ $plant->getName() }}</a></li>
+                        @foreach ($park->plants as $plant)
+                            <li><a href="{{ route('plants.read', $plant) }}">{{ $plant->name }}</a></li>
                         @endforeach
                     </ul>
                 </div>

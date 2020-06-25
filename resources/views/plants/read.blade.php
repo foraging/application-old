@@ -1,6 +1,6 @@
 @extends('layout.standard')
 
-@section('title', $plant->getName())
+@section('title', $plant->name)
 
 @section('content')
     <div class="container plants read">
@@ -10,10 +10,10 @@
 
                 {{-- Summary --}}
                 <div class="section plant summary">
-                    <div class="title">{{ $plant->getName() }}</div>
+                    <div class="title">{{ $plant->name }}</div>
                     @include('plants.partials.flags')
                     <div class="description">
-                        <p>{{ $plant->getDescription() }}</p>
+                        <p>{{ $plant->description }}</p>
                         <div class="clearfix"></div>
                     </div>
                 </div>
@@ -34,8 +34,8 @@
                     <div class="title">Parks</div>
                     <div class="description">Below is a list of parks that this plant can be found in</div>
                     <ul>
-                        @foreach ($plant->getParks() as $park)
-                            <li><a href="{{ route('parks.read', $park) }}">{{ $park->getName() }}</a></li>
+                        @foreach ($plant->parks as $park)
+                            <li><a href="{{ route('parks.read', $park) }}">{{ $park->name }}</a></li>
                         @endforeach
                     </ul>
                 </div>
