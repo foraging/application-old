@@ -108,6 +108,30 @@ eval("/*!\n  * Bootstrap v4.5.0 (https://getbootstrap.com/)\n  * Copyright 2011-
 
 /***/ }),
 
+/***/ "../../node_modules/google-maps/lib/index.js":
+/*!***********************************************************************!*\
+  !*** /git/foraging/application/node_modules/google-maps/lib/index.js ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nfunction __export(m) {\n    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];\n}\nObject.defineProperty(exports, \"__esModule\", { value: true });\n__export(__webpack_require__(/*! ./loader */ \"../../node_modules/google-maps/lib/loader.js\"));\n//# sourceMappingURL=index.js.map\n\n//# sourceURL=webpack:////git/foraging/application/node_modules/google-maps/lib/index.js?");
+
+/***/ }),
+
+/***/ "../../node_modules/google-maps/lib/loader.js":
+/*!************************************************************************!*\
+  !*** /git/foraging/application/node_modules/google-maps/lib/loader.js ***!
+  \************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar Loader = /** @class */ (function () {\n    function Loader(apiKey, options) {\n        if (apiKey === void 0) { apiKey = null; }\n        if (options === void 0) { options = {}; }\n        this.apiKey = apiKey;\n        this.options = options;\n        if (typeof window === 'undefined') {\n            throw new Error('google-maps is supported only in browser environment');\n        }\n    }\n    Loader.prototype.load = function () {\n        var _this = this;\n        if (typeof this.api !== 'undefined') {\n            return Promise.resolve(this.api);\n        }\n        if (typeof this.loader !== 'undefined') {\n            return this.loader;\n        }\n        window[Loader.CALLBACK_NAME] = function () {\n            _this.api = window['google'];\n            if (typeof _this.resolve === 'undefined') {\n                throw new Error('Should not happen');\n            }\n            _this.resolve(_this.api);\n        };\n        window['gm_authFailure'] = function () {\n            if (typeof _this.reject === 'undefined') {\n                throw new Error('Should not happen');\n            }\n            _this.reject(new Error('google-maps: authentication error'));\n        };\n        return this.loader = new Promise(function (resolve, reject) {\n            _this.resolve = resolve;\n            _this.reject = reject;\n            var script = document.createElement('script');\n            script.src = _this.createUrl();\n            script.async = true;\n            script.onerror = function (e) { return reject(e); };\n            document.head.appendChild(script);\n        });\n    };\n    Loader.prototype.createUrl = function () {\n        var parameters = [\n            \"callback=\" + Loader.CALLBACK_NAME,\n        ];\n        if (this.apiKey) {\n            parameters.push(\"key=\" + this.apiKey);\n        }\n        for (var name_1 in this.options) {\n            if (this.options.hasOwnProperty(name_1)) {\n                var value = this.options[name_1];\n                if (name_1 === 'version') {\n                    name_1 = 'v';\n                }\n                if (name_1 === 'libraries') {\n                    value = value.join(',');\n                }\n                parameters.push(name_1 + \"=\" + value);\n            }\n        }\n        return \"//maps.googleapis.com/maps/api/js?\" + parameters.join('&');\n    };\n    Loader.CALLBACK_NAME = '_dk_google_maps_loader_cb';\n    return Loader;\n}());\nexports.Loader = Loader;\n//# sourceMappingURL=loader.js.map\n\n//# sourceURL=webpack:////git/foraging/application/node_modules/google-maps/lib/loader.js?");
+
+/***/ }),
+
 /***/ "../../node_modules/jquery/dist/jquery.js":
 /*!********************************************************************!*\
   !*** /git/foraging/application/node_modules/jquery/dist/jquery.js ***!
@@ -195,7 +219,19 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _node_modules_bootstrap_dist_js_bootstrap_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/bootstrap/dist/js/bootstrap.js */ \"../../node_modules/bootstrap/dist/js/bootstrap.js\");\n/* harmony import */ var _node_modules_bootstrap_dist_js_bootstrap_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_bootstrap_dist_js_bootstrap_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_fortawesome_fontawesome_free_js_all_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/@fortawesome/fontawesome-free/js/all.js */ \"../../node_modules/@fortawesome/fontawesome-free/js/all.js\");\n/* harmony import */ var _node_modules_fortawesome_fontawesome_free_js_all_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_fortawesome_fontawesome_free_js_all_js__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\n\n//# sourceURL=webpack:///./application.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _node_modules_bootstrap_dist_js_bootstrap_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/bootstrap/dist/js/bootstrap.js */ \"../../node_modules/bootstrap/dist/js/bootstrap.js\");\n/* harmony import */ var _node_modules_bootstrap_dist_js_bootstrap_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_bootstrap_dist_js_bootstrap_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_fortawesome_fontawesome_free_js_all_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/@fortawesome/fontawesome-free/js/all.js */ \"../../node_modules/@fortawesome/fontawesome-free/js/all.js\");\n/* harmony import */ var _node_modules_fortawesome_fontawesome_free_js_all_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_fortawesome_fontawesome_free_js_all_js__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _map_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./map.js */ \"./map.js\");\n\n\n\n\n//# sourceURL=webpack:///./application.js?");
+
+/***/ }),
+
+/***/ "./map.js":
+/*!****************!*\
+  !*** ./map.js ***!
+  \****************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var google_maps__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! google-maps */ \"../../node_modules/google-maps/lib/index.js\");\n/* harmony import */ var google_maps__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(google_maps__WEBPACK_IMPORTED_MODULE_0__);\n\n\n\nconst options = {\n    'region': 'GB'\n};\nconst loader = new google_maps__WEBPACK_IMPORTED_MODULE_0__[\"Loader\"]('AIzaSyBmJfTc7WkzqLGGUIPndTYciPno4jclq7E', options);\n\n\n\n\nloader.load().then(function (google) {\n    let map = new google.maps.Map(document.getElementById('map'), {\n        zoom: 5,\n        center: { lat: 54.597528, lng: -4.0539551 },\n        // restriction: {\n        //     latLngBounds: {\n        //         east:  24.111384999999927,\n        //         north: 54.83666,\n        //         south: 49.002914,\n        //         west: 14.149166000000037\n        //     },\n        //     strictBounds: true\n        // },\n        // scaleControl: true\n    });\n});\n\n\n//# sourceURL=webpack:///./map.js?");
 
 /***/ }),
 

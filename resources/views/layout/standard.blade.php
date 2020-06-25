@@ -6,7 +6,5 @@
     @include('layout.sections.header')
 
     {{-- Website main content --}}
-    <div class="container">
-        @yield('content')
-    </div>
+    @yield('content')
 @overwrite

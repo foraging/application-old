@@ -1,6 +1,12 @@
-$enable-rounded:   false;
+//$enable-rounded:   false;
 
-/* Bootstrap colors */
-$primary: #1ca56f;
-$success: #99d53b;
-$secondary: #8D8741;
+/* Colors */
+$green: #1ca56f;
+$light-green: #99d53b;
+$brown: #615c28;
+
+$primary: $green;
+$success: $light-green;
+$secondary: $brown;
+
+$ink: #000;

@@ -11,17 +11,14 @@
     {{-- Navigation links --}}
     <div class="collapse navbar-collapse" id="navigation-links">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('animals.index') }}">Animals</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('plants.index') }}">Plants</a>
+            </li>
             <li class="nav-item active">
-                <a class="nav-link" href="#">Parks <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Trails</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Plants</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Animals</a>
+                <a class="nav-link" href="{{ route('parks.index') }}">Parks <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Groups</a>
@@ -39,7 +36,7 @@
             <div class="input-group">
                 <input class="form-control" type="search" placeholder="Search">
                 <div class="input-group-append">
-                    <button class="btn btn-success" type="submit">Search</button>
+                    <button class="btn btn-secondary" type="submit">Search</button>
                 </div>
             </div>
         </form>

@@ -1,0 +1,48 @@
+.flag {
+    font-size: 1rem;
+    &.no {
+        color: $gray-500;
+    }
+}
+
+.edible {
+    color: $light-green;
+}
+
+.poisonous {
+    color: $purple;
+}
+
+.summer {
+    color: $yellow;
+}
+
+.winter {
+    color: $blue;
+}
+
+.spring {
+    color: $green;
+}
+
+.autumn {
+    color: $red;
+}
+
+.card.plant {
+    .type {
+        font-size: .8rem;
+        text-transform: capitalize;
+        color: $secondary;
+    }
+}
+
+.section.plant {
+    .flags {
+        margin-bottom: 1rem;
+    }
+    .flag {
+        font-size: 1.2rem;
+    }
+}
+
