@@ -1,4 +1,3 @@
-/* Colors */
 /*!
  * Bootstrap v4.5.0 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
@@ -11762,68 +11761,18 @@ body {
 html {
   font-size: 14px; }
 
-.card {
-  margin-bottom: 1.5rem; }
-  .card .image {
-    flex-shrink: 0;
-    width: 100%;
-    height: 180px;
-    display: block; }
-  .card .content {
-    flex: 1 1 auto;
-    min-height: 1px;
-    padding: 1.25rem; }
-    .card .content .title {
-      font-weight: bold;
-      margin-bottom: .1rem; }
-    .card .content .subtitle {
-      font-size: .8rem;
-      text-transform: capitalize;
-      color: #615c28; }
-    .card .content .description {
-      color: #000;
-      margin: .75rem 0;
-      min-height: 80px;
-      height: 80px;
-      max-height: 80px; }
+.title {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  font-weight: bold; }
+
+.subtitle {
+  font-size: .8rem;
+  text-transform: capitalize;
+  color: #615c28; }
 
 .section {
   margin-bottom: 2rem; }
-  .section .title {
-    font-weight: bold;
-    font-size: 2rem; }
-
-.summary .tags {
-  width: 100%;
-  margin-bottom: 1rem; }
-
-.summary .tag {
-  color: #fff;
-  background-color: #615c28;
-  display: inline-block;
-  padding: 0.45em 0.7em;
-  font-size: .8rem;
-  line-height: 1;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: baseline;
-  border-radius: 0.25rem;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  margin-bottom: .5rem;
-  margin-right: .2rem; }
-  .summary .tag.common {
-    background-color: #007bff; }
-  .summary .tag.dangerous {
-    background-color: #dc3545; }
-  .summary .tag.edible {
-    background-color: #1ca56f; }
-  .summary .tag.poisonous {
-    background-color: #6f42c1; }
-  .summary .tag.rare {
-    color: #000;
-    background-color: #ffc107; }
-  .summary .tag.safe {
-    background-color: #1ca56f; }
 
 .map {
   position: relative;
@@ -11837,6 +11786,53 @@ html {
   left: 0;
   width: 100% !important;
   height: 100% !important; }
+
+.card {
+  margin-bottom: 1.5rem; }
+  .card .image {
+    flex-shrink: 0;
+    width: 100%;
+    height: 180px;
+    display: block; }
+  .card .content {
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1.25rem; }
+    .card .content .title {
+      font-size: 1rem;
+      margin-bottom: .1rem; }
+    .card .content .description {
+      min-height: 80px;
+      height: 80px;
+      max-height: 80px; }
+
+.description {
+  margin-top: 1rem;
+  margin-bottom: .5rem;
+  max-height: none;
+  overflow: hidden;
+  transition: all .25s linear; }
+
+@media (max-width: 767.98px) {
+  .mobile-description {
+    max-height: 210px; } }
+
+a.show-full-description,
+a.show-mobile-description {
+  cursor: pointer; }
+  a.show-full-description, a.show-full-description:link, a.show-full-description:visited,
+  a.show-mobile-description,
+  a.show-mobile-description:link,
+  a.show-mobile-description:visited {
+    color: rgba(28, 165, 111, 0.7); }
+  a.show-full-description:active, a.show-full-description:hover,
+  a.show-mobile-description:active,
+  a.show-mobile-description:hover {
+    color: #1ca56f; }
+  a.show-full-description.center,
+  a.show-mobile-description.center {
+    display: block;
+    text-align: center; }
 
 nav.navbar {
   margin-bottom: 1rem; }

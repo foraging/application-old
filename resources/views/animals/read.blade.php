@@ -12,10 +12,8 @@
                 <div class="section animal summary">
                     <div class="title">{{ $animal->name }}</div>
                     <div class="subtitle">{{ $animal->scientific }}</div>
-                    <div class="description">
-                        <p>{{ $animal->description }}</p>
-                        <div class="clearfix"></div>
-                    </div>
+                    <div id="animal-description" class="description mobile-description">{{ $animal->description }}</div>
+                    <a class="show-full-description center d-md-none" data-target="animal-description">Show more</a>
                 </div>
 
                 {{-- Locations --}}

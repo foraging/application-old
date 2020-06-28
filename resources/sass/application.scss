@@ -1,9 +1,17 @@
-@import "config";
+// Configurations
+@import "config/colors";
+
+// External
 @import "node_modules/bootstrap/scss/bootstrap";
 @import "node_modules/@fortawesome/fontawesome-free/css/all";
-@import "layout";
-@import "header";
-@import "parks";
-@import "plants";
+
+// Core layout
+@import "layout/core";
+@import "layout/cards";
+@import "layout/descriptions";
+
+// Modules
+@import "modules/header";
+@import "modules/plants";
 
 

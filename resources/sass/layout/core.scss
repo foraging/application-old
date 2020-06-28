@@ -1,0 +1,44 @@
+* {
+    font-family: Roboto, sans-serif;
+}
+
+body {
+    color: $ink;
+}
+
+html {
+    font-size: 14px;
+}
+
+.title {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.subtitle {
+    font-size: .8rem;
+    text-transform: capitalize;
+    color: $secondary;
+}
+
+
+
+
+.section {
+    margin-bottom: 2rem;
+}
+
+.map {
+    position: relative;
+    padding-bottom: 75%; // This is the aspect ratio
+    height: 0;
+    overflow: hidden;
+}
+#map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}

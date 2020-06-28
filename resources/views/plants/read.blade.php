@@ -11,11 +11,10 @@
                 {{-- Summary --}}
                 <div class="section plant summary">
                     <div class="title">{{ $plant->name }}</div>
+                    <div class="subtitle">{{ $plant->scientific }}</div>
                     @include('plants.partials.flags')
-                    <div class="description">
-                        <p>{{ $plant->description }}</p>
-                        <div class="clearfix"></div>
-                    </div>
+                    <div id="plant-description" class="description mobile-description">{{ $plant->description }}</div>
+                    <a class="show-full-description center d-md-none" data-target="plant-description">Show more</a>
                 </div>
 
                 {{-- Locations --}}

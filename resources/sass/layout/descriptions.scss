@@ -1,0 +1,33 @@
+.description {
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+    max-height: none;
+    overflow: hidden;
+    transition: all .25s linear;
+}
+
+@include media-breakpoint-down(sm) {
+    .mobile-description {
+        max-height: 210px;
+    }
+}
+
+
+a.show-full-description,
+a.show-mobile-description {
+
+    cursor: pointer;
+
+    &, &:link, &:visited {
+        color: fade_out($primary, .3);
+    }
+
+    &:active, &:hover {
+        color: $primary;
+    }
+
+    &.center {
+        display: block;
+        text-align: center;
+    }
+}

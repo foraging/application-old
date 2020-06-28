@@ -11,7 +11,8 @@
                 {{-- Summary --}}
                 <div class="section summary">
                     <div class="title">{{ $park->name }}</div>
-                    <div class="description">{{ $park->description }}</div>
+                    <div id="park-description" class="description mobile-description">{{ $park->description }}</div>
+                    <a class="show-full-description center d-md-none" data-target="park-description">Show more</a>
                 </div>
 
                 {{-- Locations --}}
@@ -23,14 +24,12 @@
                 </div>
             </div>
 
-
-
             <div class="col-md-3">
 
                 {{-- Animals that can be found in this park --}}
                 <div class="section park animals">
                     <div class="title">Animals</div>
-                    <div class="description">Below is a list of animal known to be found in this park</div>
+                    <div class="description short">Below is a list of animal known to be found in this park</div>
                     <ul>
                         @foreach ($park->animals as $animal)
                             <li><a href="{{ route('animals.read', $animal) }}">{{ $animal->name }}</a></li>
